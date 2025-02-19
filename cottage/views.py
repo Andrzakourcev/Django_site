@@ -5,3 +5,5 @@ def index(requests): #переменная requests - ссылка на клас
     return HttpResponse("Страница приложения cottage")
 
 
+def parts(requests):
+    return HttpResponse("<h1>Части коттеджа</h1>")
