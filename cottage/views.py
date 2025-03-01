@@ -4,6 +4,7 @@ from django.template.defaultfilters import slugify
 from django.urls import reverse
 
 menu = [
+    {'title': 'Главная', 'url_name': 'home'},
     {'title': 'Забронировать', 'url_name': 'book'},
     {'title': 'Галерея', 'url_name': 'gallery'},
     {'title': 'Отзывы', 'url_name': 'reviews'},
