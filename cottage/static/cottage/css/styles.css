@@ -11,7 +11,7 @@ body {
 
 /* Навигационное меню */
 .navbar {
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.75);
     color: white;
     padding: 15px 0;
     position: fixed;
@@ -108,30 +108,411 @@ body {
 .btn:hover {
     background: #ffcc00;
 }
-
 /* Блок информации */
-.container {
-    max-width: 900px;
-    margin: 0 auto;
+.text-block {
+    background-color: #ffffff;
+    text-align: center;
     padding: 40px 20px;
 }
 
-.info {
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-top: -50px;
-    position: relative;
-    z-index: 2;
+.text-container {
+    max-width: 700px;
+    margin: 0 auto;
 }
 
-.info h2 {
+.text-content {
+    font-size: 20px;
+    font-weight: 500;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Описание коттеджа и бани */
+.houses-container {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center; /* Центрируем блок */
+    gap: 40px; /* Расстояние между карточками */
+    padding: 20px; /* Отступы от краев экрана */
+}
+
+.house-card {
+    text-align: center;
+    max-width: 380px; /* Умеренный размер карточек */
+}
+
+.house-card img {
+    width: 100%; /* Делаем картинку адаптивной */
+    height: auto;
+    border-radius: 0; /* Убираем закругление */
+}
+
+.house-card h3 {
+    font-size: 24px; /* Увеличенный размер заголовка */
+    margin: 10px 0;
+}
+
+.house-card p {
+    font-size: 18px; /* Чуть крупнее текст */
+    line-height: 1.5;
+}
+
+.price-button {
+    background-color: #fff;
+    border: 2px solid #000;
+    padding: 10px 20px;
+    font-size: 18px; /* Сделал кнопку больше */
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.price-button:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+
+
+/* Галерея */
+.gallery {
+    background-color: #ffffff;
+    text-align: center;
+    padding: 40px 0;
+}
+
+.gallery h2 {
     font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    padding: 0 20px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.gallery-grid2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    padding: 0 20px;
+}
+
+.gallery-grid2 img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+/* Фон секции формы */
+.contact-form {
+    background: url('../images/form-bg.jpg') no-repeat center center/cover;
+    padding: 80px 20px;
+    position: relative;
+    display: flex;
+    justify-content: flex-end; /* Смещаем форму правее */
+    align-items: center;
+}
+
+/* Затемнение фона */
+.contact-form::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+/* Контейнер формы (уменьшен) */
+.form-overlay {
+    background: #333;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 400px; /* Форма стала меньше */
+    width: 100%;
+    color: white;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    margin-right: 10%; /* Смещаем форму правее */
+}
+
+/* Заголовок */
+.form-overlay h4 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+/* Группы полей (убираем фон и делаем полоски) */
+.form-group {
+    position: relative;
+    margin-bottom: 12px;
+}
+
+/* Инпут как полоска */
+.form-group input {
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    background: transparent; /* Прозрачный фон */
+    color: white;
+    font-size: 14px;
+    outline: none;
+    border-bottom: 1px solid #777; /* Полоска вместо рамки */
+    transition: border-bottom 0.3s ease;
+}
+
+/* Изменение цвета полоски при фокусе */
+.form-group input:focus {
+    border-bottom: 1px solid #ffffff;
+}
+
+/* Серый текст для placeholder */
+.form-group label {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #aaa; /* Серый текст */
+    transition: 0.3s;
+    font-size: 14px;
+    pointer-events: none; /* Чтобы не перекрывать ввод */
+}
+
+/* Анимация: сдвиг текста вверх при вводе */
+.form-group input:focus + label,
+.form-group input:not(:placeholder-shown) + label {
+    top: 0;
+    font-size: 12px;
+    color: #ffffff; /* Желтый цвет при фокусе */
+}
+
+
+/* Кнопка (уменьшена и закруглена) */
+.submit-button {
+    background: transparent;
+    color: white;
+    padding: 8px 15px;
+    font-size: 16px;
+    border: 2px solid white;
+    border-radius: 20px; /* Закругленные углы */
+    cursor: pointer;
+    transition: 0.3s;
+    width: auto; /* Кнопка теперь небольшая */
+    min-width: 120px;
+}
+
+.submit-button:hover {
+    background: white;
+    color: black;
+}
+
+/* Текст соглашения */
+.agreement-text {
+    font-size: 12px;
+    color: #aaa;
+    margin-top: 10px;
+}
+
+.agreement-text a {
+    color: #ccc;
+    text-decoration: underline;
+}
+
+.agreement-text a:hover {
+    color: white;
+}
+
+.house-section {
+    padding: 100px 100px;
+    background-color: #ffffff;
+    margin-top: 15px;
+}
+
+.house-title {
+    font-size: 32px;
+    color: #000;
+    font-weight: normal;
+    text-align: left;
+    margin-top: 10px;
+    margin-left: 60px;
+    margin-bottom: 60px;
+    font-weight: bold;
+}
+
+
+.house-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.house-block {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 40px;
+}
+
+.house-block img {
+    width: 40%;
+    height: auto;
+}
+
+.house-reverse {
+    flex-direction: row-reverse;
+}
+
+.house-text {
+    width: 55%;
+}
+
+.house-text h4 {
+    font-size: 24px;
+    font-weight: bold;
     margin-bottom: 10px;
 }
 
-.info p {
-    font-size: 18px;
-    line-height: 1.6;
+.house-text h5 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
 }
+
+.house-text p {
+    font-size: 18px;
+    color: #727c8f;
+    line-height: 1.5;
+}
+
+.house-text ul {
+    font-size: 18px;
+    color: #727c8f;
+    padding-left: 20px;
+}
+
+.house-text ul li {
+    margin-bottom: 5px;
+}
+
+.three-images-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px; /* Расстояние между блоками */
+    padding: 60px 5%; /* Отступы от краев экрана */
+    background: #f5f5f5; /* Светлый фон для контраста */
+}
+
+.image-block {
+    width: 30%; /* Три блока в ряд */
+    background: #fff; /* Чисто белый фон */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Легкая тень */
+}
+
+.image-container {
+    position: relative;
+}
+
+.image-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.image-number {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-size: 48px; /* Увеличенный размер */
+    font-weight: bold;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5px 15px;
+}
+
+.image-caption {
+    margin-top: 15px;
+    font-size: 21px;
+    font-weight: 500;
+    text-align: center;
+    color: #333;
+}
+
+.caption-list {
+    text-align: left; /* Выровнять текст по левому краю */
+    list-style: none; /* Убираем стандартные маркеры списка */
+    padding: 0; /* Убираем внутренние отступы */
+    margin: 20px; /* Убираем внешние отступы */
+    line-height: 2; /* межстрочный интервал*/
+    font-size: 16px; /* Опционально: можно настроить размер шрифта */
+    color: #333;
+    font-weight: 500;
+
+}
+
+/* Фон с изображением */
+.dom-background {
+    height: 700px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% auto; /* Изображение растягивается на весь экран */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+/* Контент */
+.dom-content {
+    text-align: center;
+    color: white;
+    padding: 40px;
+    border-radius: 20px;
+}
+
+h1 {
+    font-size: 70px;
+    margin-bottom: 40px;
+}
+
+.dom-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+/* Кнопки */
+.dom-btn {
+    padding: 15px 30px;
+    font-size: 20px;
+    color: black;
+    background-color: white;
+
+    border-radius: 30px;  /* Кнопки теперь закругленные */
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dom-btn:hover {
+    background-color: black;
+    color: white;
+
+}
+

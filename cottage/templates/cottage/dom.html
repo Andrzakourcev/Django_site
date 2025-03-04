@@ -1,0 +1,191 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Дом | Лесной охта-дом{% endblock %}
+
+{% block content %}
+
+<section class="house-section">
+    <h1 class="house-title">Лесной Охта-дом</h1>
+    <div class="house-container">
+        <div class="house-block">
+            <img src="{% static 'cottage/images/dom1.jpg' %}" alt="Лесной Охта-дом">
+            <div class="house-text">
+                <h4>Эксклюзивный эко-коттедж 270 кв.м</h4>
+                <p>Уникальное пространство для комфортного отдыха на природе, незабываемых эмоций и максимального расслабления!</p>
+
+<p>Коттедж из массивной лиственницы, с отделкой из натуральных материалов, интерьером в эко-стилистике: много дерева, натуральных материалов и естественного света. Лесной Охта-дом имеет панораму на сосновый лес, чтобы гости наслаждались приятной тишиной и лесной свежестью.</p>
+
+<p>Наш коттедж оснащен всеми коммуникациями и удобствами для гостей круглый год! Отличное расположение позволит вам наслаждаться загородным проживанием и при этом находится совсем рядом с городом!</p>
+            </div>
+        </div>
+
+        <div class="house-block house-reverse">
+            <img src="{% static 'cottage/images/dom2.jpg' %}" alt="Главное о доме">
+            <div class="house-text">
+                <h4>Главное о доме</h4>
+                <ul>
+    <li>Отдельно стоящий двухэтажный эко-сруб оригинальной планировки, который отлично подходит для беззаботного отдыха всей семьёй или компанией друзей.</li>
+    <li>Дом имеет выход на собственную террасу с удобной ротанговой мебелью и мангальной зоной для приготовления блюд на свежем воздухе.</li>
+    <li>Высокие потолки и большие панорамные окна стирают границы между интерьером виллы и окружающей природой.</li>
+    <li>Просторная гостиная с лофт-интерьерами, телевизором, барной стойкой и мягкой зоной создана для того, чтобы вы почувствовали домашний уют и комфорт.</li>
+    <li>Итальянская кухня, оснащенная всей техникой и стильной посудой.</li>
+    <li>4 спальни, интерьеры выполнены в теплых оттенках для умиротворенного отдыха, кровати KING-SIZE с удобными матрасами и постельным бельем.</li>
+</ul>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<section class="three-images-section">
+    <div class="image-block">
+        <div class="image-container">
+            <div class="image-wrapper">
+                <img src="{% static 'cottage/images/dom3.jpg' %}" alt="Изображение 1">
+                <span class="image-number">01</span>
+            </div>
+             <div class="image-caption">
+                <h3 class="caption-title">Преимущества</h3>
+                <ul class="caption-list">
+                    - близко в городу, но будто в волшебном лесу <br>
+                    - закрытая территория, терраса вокруг дома с уличной мебелью, на которой можно выпить кофе, позавтракать, пообедать, позагорать или посидеть в приятной компании<br>
+                    - проход по террасе к купели на дровах <br>
+                    - панорамные окна высотой 8 метров<br>
+                    - парная зона прямо в доме<br>
+                    - современная техника для удобства<br>
+                    - посуда в гармоничной стилистике для сервировки и готовки еды<br>
+                    - wi-fi, тв, play station по запросу<br>
+                    - постельное бельё, полотенца<br>
+                    - принадлежности для бани (простыни, веники, халаты)<br>
+                    - вечерняя подсветка на улице и в доме<br>
+                    - заезд с 16:30, выезд до 13:00<br>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="image-block">
+        <div class="image-container">
+            <div class="image-wrapper">
+                <img src="{% static 'cottage/images/dom4.jpg' %}" alt="Изображение 2">
+                <span class="image-number">02</span>
+            </div>
+             <div class="image-caption">
+                <h3 class="caption-title">Оснащение на улице</h3>
+                <ul class="caption-list">
+                    - река Охта прямо на территории<br>
+                    - лесное пространство с чистым воздухом<br>
+                    - патио зона с теннисной зоной и огромным батутом для детей<br>
+                    - дом окружён хвойными и березовыми деревьями<br>
+                    - парковочная зона на участке на 8 машин<br>
+                    - мангальная зона, принадлежности для мангала, столик на улице<br>
+                    - вечерняя подсветка в лесном пространстве<br>
+                    - подвесные качели<br>
+                    - можно приехать со своей лодкой или удочками и половить рыбу в реке<br>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="image-block">
+        <div class="image-container">
+            <div class="image-wrapper">
+                <img src="{% static 'cottage/images/dom5.jpg' %}" alt="Изображение 3">
+                <span class="image-number">03</span>
+            </div>
+             <div class="image-caption">
+                <h3 class="caption-title">Варианты размещения</h3>
+                <ul class="caption-list">
+                    Для вашего комфортного расположения в доме находится 4 спальни:<br>
+                    - спальня №1 (первый этаж, двуспальная кровать и кровать для ребенка до 7-10лет)<br>
+                    - спальня №2 (второй этаж, двуспальная кровать и выход в туалетную комнату №2)<br>
+                    - спальня №3 (второй этаж, двуспальная кровать и односпальная. Из спальни №3 проход в спальню №4)<br>
+                    - спальня №4 (мини-спальня, двуспальная кровать и односпальная).<br>
+                    Все двуспальные кровати king-size.<br>
+                    <br>
+                    Так же для дополнительного размещения имеется:<br>
+                    - двуспальный диван на 1 этаже<br>
+                    - двуспальный диван на 2 этаже<br>
+                    - детский раскладной манеж<br>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="gallery">
+
+        <h2>Галерея</h2>
+        <div class="gallery-grid">
+            <img src="{% static 'cottage/images/gallery_dom1.jpg' %}" alt="Галерея_дома_1">
+            <img src="{% static 'cottage/images/gallery_dom2.jpg' %}" alt="Галерея_дома_2">
+            <img src="{% static 'cottage/images/gallery_dom3.jpg' %}" alt="Галерея_дома_3">
+            <img src="{% static 'cottage/images/gallery_dom4.jpg' %}" alt="Галерея_дома_4">
+        </div>
+        <p></p>
+        <div class="gallery-grid">
+            <img src="{% static 'cottage/images/gallery_dom5.jpg' %}" alt="Галерея_дома_5">
+            <img src="{% static 'cottage/images/gallery_dom6.jpg' %}" alt="Галерея_дома_6">
+            <img src="{% static 'cottage/images/gallery_dom7.jpg' %}" alt="Галерея_дома_7">
+            <img src="{% static 'cottage/images/gallery_dom8.jpg' %}" alt="Галерея_дома_8">
+        </div>
+</section>
+
+<section class="dom-background" style="background-image: url('{% static 'cottage/images/banner.jpg' %}')">
+        <div class="dom-content">
+            <h1>Аренда коттеджа</h1>
+            <div class="dom-buttons">
+                <button class="dom-btn">Оставить заявку</button>
+                <button class="dom-btn">Узнать свободные даты</button>
+            </div>
+        </div>
+</section>
+
+ <!-- Форма заявки -->
+<section class="contact-form">
+    <div class="form-overlay">
+        <h4>Оставьте заявку</h4>
+        <form action="#" method="POST" class="form-container">
+            {% csrf_token %}
+
+            <div class="form-group">
+                <input type="text" name="name" required>
+                <label for="name">Ваше имя</label>
+            </div>
+
+            <div class="form-group">
+                <input type="text" name="dates">
+                <label for="dates">Ваши даты</label>
+            </div>
+
+            <div class="form-group">
+                <input type="tel" name="phone" required pattern="^[\+]?[\d\s\-]*[\d\s]$">
+                <label for="phone">Ваш телефон *</label>
+            </div>
+
+            <button type="submit" class="submit-button">Отправить</button>
+
+            <p class="agreement-text">
+                Нажимая на кнопку, вы соглашаетесь с условиями обработки персональных данных и
+                <a href="#">политикой конфиденциальности</a>
+            </p>
+        </form>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

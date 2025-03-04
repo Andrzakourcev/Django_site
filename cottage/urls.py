@@ -16,4 +16,5 @@ urlpatterns = [
     path('arhive/<year4:year>/', views.arhive, name='arhive'),
     path('book/', views.book, name='book'),
     path('contacts/', views.contacts, name='contacts'),
+    path('dom/', views.dom, name='dom'),
 ]

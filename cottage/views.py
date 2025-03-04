@@ -5,6 +5,7 @@ from django.urls import reverse
 
 menu = [
     {'title': 'Главная', 'url_name': 'home'},
+    {'title': 'Дом', 'url_name': 'dom'},
     {'title': 'Забронировать', 'url_name': 'book'},
     {'title': 'Галерея', 'url_name': 'gallery'},
     {'title': 'Отзывы', 'url_name': 'reviews'},
@@ -20,7 +21,12 @@ def index(request):  # переменная request - ссылка на клас
     }
     return render(request, 'cottage/index.html', context=data)
 
-
+def dom(request):
+    data = {
+        'title': 'Дом',
+        'menu': menu,
+    }
+    return render(request, 'cottage/dom.html', context=data)
 def book(request):
     data = {
         'title': 'Забронировать',

@@ -12,7 +12,7 @@
     <!-- Навигация -->
     <nav class="navbar">
         <div class="container">
-            <a href="#" class="logo">Лесной охта-дом</a>
+            <a href="{% url 'home' %}" class="logo">Лесной охта-дом</a>
             <ul class="menu">
                 {% for m in menu %}
                 <li><a href="{% url m.url_name %}">{{ m.title }}</a></li>

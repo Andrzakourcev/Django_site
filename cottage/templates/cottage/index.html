@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-
+{% load static %}
 {% block title %}Главная | Лесной охта-дом{% endblock %}
 
 {% block content %}
@@ -12,12 +12,92 @@
         </div>
     </header>
 
-    <!-- Блок с информацией -->
-    <div class="container">
-        <section class="info">
-            <h2>О нашем коттедже</h2>
-            <p>Наш коттедж расположен в живописном месте среди лесов и озер. Здесь вы сможете отдохнуть от городской суеты, насладиться тишиной и природой.</p>
-            <p>У нас есть удобные номера, баня, мангальная зона и множество развлечений для всей семьи.</p>
-        </section>
+    <!-- Блок с информацией о коттедже -->
+    <section class="text-block">
+    <div class="text-container">
+        <p class="text-content">
+            Хотите провести время наедине с природой? Наши дома созданы для тех, кто хочет выбраться из мегаполиса на денёк, два или сколько душа пожелает.
+            Остановить череду рутинных дел, надышаться свежим воздухом, наполниться энергией лесной природы, отдохнуть, уединиться или просто провести время с самыми близкими!
+            <br><br>
+            Чтобы ваш отдых был ярче и разнообразнее, расскажем вам, чем можно заняться у нас.
+            Ведь мы точно знаем, что вас ждут незабываемые эмоции и теплые воспоминания!
+        </p>
     </div>
+    </section>
+
+
+
+    <!-- Блок с информацией о бане -->
+    <section class="houses-container">
+        <div class="house-card">
+            <img src="{% static 'cottage/images/house1.jpg' %}" alt="Дом 1">
+            <h3>273 м²</h3>
+            <p>Дом из Лиственницы с кухней-гостиной, вторым светом, террасой и четырьмя спальнями. <br> от 25000/сутки</p>
+            <button class="price-button">От 25 000 ₽</button>
+        </div>
+        <div class="house-card">
+            <img src="{% static 'cottage/images/house2.jpg' %}" alt="Дом 2">
+            <h3>133 м²</h3>
+            <p>Двухэтажный дом со вторым светом, двумя спальнями, баней и купелью в лесной зоне. <br> от 20000/сутки</p>
+            <button class="price-button">От 20 000 ₽</button>
+        </div>
+        <div class="house-card">
+            <img src="{% static 'cottage/images/house3.jpg' %}" alt="Баня">
+            <h3>95 м²</h3>
+            <p>Баня с парной из Кело, террасой, мангальной зоной и купелью на дровах у реки Охта. <br> от 2500/час</p>
+            <button class="price-button">От 8 000 ₽</button>
+        </div>
+    </section>
+
+    <!-- Галерея фотографий -->
+    <section class="gallery">
+        <h2>Галерея</h2>
+        <div class="gallery-grid">
+            <img src="{% static 'cottage/images/photo1.jpg' %}" alt="Фото 1">
+            <img src="{% static 'cottage/images/photo2.jpg' %}" alt="Фото 2">
+            <img src="{% static 'cottage/images/photo3.jpg' %}" alt="Фото 3">
+            <img src="{% static 'cottage/images/photo4.jpg' %}" alt="Фото 4">
+        </div>
+        <p></p>
+        <div class="gallery-grid">
+            <img src="{% static 'cottage/images/photo5.jpg' %}" alt="Фото 5">
+            <img src="{% static 'cottage/images/photo6.jpg' %}" alt="Фото 6">
+            <img src="{% static 'cottage/images/photo7.jpg' %}" alt="Фото 7">
+            <img src="{% static 'cottage/images/photo8.jpg' %}" alt="Фото 8">
+
+        </div>
+    </section>
+
+    <!-- Форма заявки -->
+    <section class="contact-form">
+    <div class="form-overlay">
+        <h4>Оставьте заявку</h4>
+        <form action="#" method="POST" class="form-container">
+            {% csrf_token %}
+
+            <div class="form-group">
+                <input type="text" name="name" required>
+                <label for="name">Ваше имя</label>
+            </div>
+
+            <div class="form-group">
+                <input type="text" name="dates">
+                <label for="dates">Ваши даты</label>
+            </div>
+
+            <div class="form-group">
+                <input type="tel" name="phone" required pattern="^[\+]?[\d\s\-]*[\d\s]$">
+                <label for="phone">Ваш телефон *</label>
+            </div>
+
+            <button type="submit" class="submit-button">Отправить</button>
+
+            <p class="agreement-text">
+                Нажимая на кнопку, вы соглашаетесь с условиями обработки персональных данных и
+                <a href="#">политикой конфиденциальности</a>
+            </p>
+        </form>
+    </div>
+    </section>
+
 {% endblock %}
